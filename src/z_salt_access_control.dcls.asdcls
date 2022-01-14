@@ -1,0 +1,8 @@
+@EndUserText.label: 'Restriction for access on airline'
+@MappingRole: true
+define role Z_SALT_ACCESS_CONTROL {
+    grant select
+    on z_salt_flights
+    where (carrid) = aspect pfcg_auth(s_carrid, carrid, ACTVT = '03');
+                        
+}

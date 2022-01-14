@@ -1,0 +1,7 @@
+@EndUserText.label: 'Restriction for access on bookings'
+@MappingRole: true
+define role Z_SALT_BOOKING_CONTROL {
+    grant select
+    on z_salt_bookings
+    where agencynum = '00000320';                   
+}
